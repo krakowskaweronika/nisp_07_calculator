@@ -31,3 +31,21 @@ function divide() {
     display.value = Number(values[0]) / Number(values[1]);
   }
 }
+
+function calculate() {
+  const expression = display.value;
+
+  if (expression.includes("+")) {
+    const values = expression.split("+");
+    display.value = Number(values[0]) + Number(values[1]);
+  } else if (expression.includes("-")) {
+    const values = expression.split("-");
+    display.value = Number(values[0]) - Number(values[1]);
+  } else if (expression.includes("*")) {
+    const values = expression.split("*");
+    display.value = Number(values[0]) * Number(values[1]);
+  } else if (expression.includes("/")) {
+    const values = expression.split("/");
+    display.value = Number(values[0]) / Number(values[1]);
+  }
+}
